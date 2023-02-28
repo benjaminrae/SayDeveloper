@@ -6,6 +6,9 @@
     "build": "next build",
     "dev": "next dev",
     "postinstall": "prisma generate",
+    "test": "vitest run --passWithNoTests",
+    "test:dev": "vitest",
+    "test:coverage": "vitest --coverage --passWithNoTests",
     "lint": "next lint",
     "start": "next start",
     "prepare": "husky install"
@@ -32,10 +35,12 @@
     "@types/react-dom": "^18.0.10",
     "@typescript-eslint/eslint-plugin": "^5.47.1",
     "@typescript-eslint/parser": "^5.47.1",
+    "@vitest/coverage-c8": "^0.29.2",
     "eslint": "^8.30.0",
     "eslint-config-next": "13.1.6",
     "husky": "^8.0.0",
     "lint-staged": "^13.1.2",
+    "prettier": "^2.8.4",
     "prisma": "^4.9.0",
     "typescript": "^4.9.4",
     "vitest": "^0.29.2"
