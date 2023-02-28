@@ -4,16 +4,21 @@ import { SessionProvider } from "next-auth/react";
 
 import { api } from "~/utils/api";
 
-import "~/styles/globals.css";
+import { ThemeProvider } from "styled-components";
+import GlobalStyles from "~/styles/GlobalStyles";
+import mainTheme from "~/styles/themes/mainTheme";
 
 const MyApp: AppType<{ session: Session | null }> = ({
   Component,
   pageProps: { session, ...pageProps },
 }) => {
   return (
-    <SessionProvider session={session}>
-      <Component {...pageProps} />
-    </SessionProvider>
+    <ThemeProvider theme={mainTheme}>
+      <GlobalStyles />
+      <SessionProvider session={session}>
+        <Component {...pageProps} />
+      </SessionProvider>
+    </ThemeProvider>
   );
 };
 
