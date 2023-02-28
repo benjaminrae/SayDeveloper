@@ -2,3 +2,4 @@
   "*.tsx, *.ts": "eslint, prettier",
   "*.md": "prettier"
 }
+  
