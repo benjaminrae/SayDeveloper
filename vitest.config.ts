@@ -11,5 +11,8 @@ export default defineConfig({
       new URL("./src/testUtils/setup.ts", import.meta.url)
     ),
     alias: { "~": fileURLToPath(new URL("./src", import.meta.url)) },
+    coverage: {
+      reporter: ["lcov", "html", "text"],
+    },
   },
 });
