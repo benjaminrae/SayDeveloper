@@ -13,6 +13,7 @@ export default defineConfig({
     alias: { "~": fileURLToPath(new URL("./src", import.meta.url)) },
     coverage: {
       reporter: ["lcov", "html", "text"],
+      exclude: ["**/*.stories.tsx"],
     },
   },
 });
