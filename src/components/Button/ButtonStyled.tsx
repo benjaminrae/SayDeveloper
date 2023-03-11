@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import type { ButtonProps } from "./Button";
+import fontSizes from "~/styles/utils/fontSizes";
 
 type ButtonStyledProps = ButtonProps;
 
@@ -16,21 +17,20 @@ const buttonStyle = css`
 const buttonSizes = css<ButtonStyledProps>`
   border-radius: ${({ theme: { sizes } }) => sizes.borderRadius};
 
-  ${(props) => {
-    switch (props.size) {
+  ${({ size }) => {
+    switch (size) {
       case "xs":
         return {
           padding: "4px 8px",
-          "font-size": "0.75rem",
         };
       case "sm":
-        return { padding: "4px 12px", "font-size": "0.875rem" };
+        return { padding: "4px 12px" };
       case "md":
-        return { padding: "8px 16px", "font-size": "1rem" };
+        return { padding: "8px 16px" };
       case "lg":
-        return { padding: "12px 16px", "font-size": "1.125rem" };
+        return { padding: "12px 16px" };
       case "xl":
-        return { padding: "16px 26px", "font-size": "1.25rem" };
+        return { padding: "16px 26px" };
     }
   }};
 `;
@@ -103,6 +103,7 @@ const ButtonStyled = styled.button<ButtonStyledProps>`
   ${(props) => props.semantic === "icon" && iconStyle}
   ${buttonSizes}
   ${buttonColors}
+  ${fontSizes}
 `;
 
 export default ButtonStyled;

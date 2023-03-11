@@ -1,7 +1,6 @@
 import { type HTMLAttributes, type PropsWithChildren } from "react";
 import ButtonStyled from "./ButtonStyled";
-
-type ButtonSize = "xs" | "sm" | "md" | "lg" | "xl";
+import { type FontSizesProps } from "~/styles/utils/fontSizes";
 
 type ButtonVariant = "primary" | "secondary" | "stroke" | "ghost";
 
@@ -11,9 +10,9 @@ type ButtonType = "text" | "icon";
 
 export interface ButtonProps
   extends HTMLAttributes<HTMLButtonElement>,
-    PropsWithChildren {
+    PropsWithChildren,
+    FontSizesProps {
   disabled?: boolean;
-  size?: ButtonSize;
   variant?: ButtonVariant;
   position?: ButtonIconPosition;
   semantic?: ButtonType;

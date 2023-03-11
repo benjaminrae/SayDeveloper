@@ -28,11 +28,11 @@ img {
 }
 
 ul {
-    list-style: none;
-    list-style-position: outside;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    padding-inline-start: 0;
+  list-style: none;
+  list-style-position: outside;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
 }
 
 input,
@@ -44,13 +44,13 @@ select {
 
 input {
   margin:0;
-	border:0;
-	padding:0;
-	display:inline-block;
-	vertical-align:middle;
-	white-space:normal;
-	background:none;
-	line-height:1;
+  border:0;
+  padding:0;
+  display:inline-block;
+  vertical-align:middle;
+  white-space:normal;
+  background:none;
+  line-height:1;
   outline: none
 }
 
