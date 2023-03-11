@@ -33,5 +33,17 @@ declare module "styled-components" {
       borderRadius: string;
     };
     ink: Record<string, string>;
+    typography: {
+      fonts: {
+        stack: string;
+      };
+      sizes: {
+        xs: string;
+        sm: string;
+        md: string;
+        lg: string;
+        xl: string;
+      };
+    };
   }
 }
