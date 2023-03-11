@@ -19,7 +19,7 @@ body {
 }
 
 html {
-  font-family: "Poppins", sans-serif;
+  font-family: ${({ theme }) => theme.typography.fonts.stack};
 }
 
 img {
@@ -40,6 +40,18 @@ button,
 textarea,
 select {
   font: inherit;
+}
+
+input {
+  margin:0;
+	border:0;
+	padding:0;
+	display:inline-block;
+	vertical-align:middle;
+	white-space:normal;
+	background:none;
+	line-height:1;
+  outline: none
 }
 
 p,
