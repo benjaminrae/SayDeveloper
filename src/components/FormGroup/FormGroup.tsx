@@ -26,7 +26,9 @@ export type FormFieldTypes =
   | "reset"
   | "button";
 
-export interface FormGroupProps extends FontSizesProps {
+export interface FormGroupProps
+  extends React.HTMLAttributes<HTMLDivElement>,
+    FontSizesProps {
   inputOptions: React.HTMLAttributes<HTMLInputElement>;
   value: string;
   label?: string;
@@ -44,7 +46,7 @@ const FormGroup = ({
   value,
   isDisabled = false,
   size = "md",
-  inputOptions: { placeholder, id, ...inputOptions },
+  inputOptions: { id, ...inputOptions },
 }: FormGroupProps) => {
   return (
     <FormGroupStyled required={required} size={size}>
@@ -54,7 +56,6 @@ const FormGroup = ({
           type={type}
           value={value}
           required={required}
-          placeholder={placeholder}
           className="form-group__input"
           disabled={isDisabled}
           id={id}

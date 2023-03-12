@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 import type { ButtonProps } from "./Button";
 import fontSizes from "~/styles/utils/fontSizes";
+import paddingBySize from "~/styles/utils/paddingsBySize";
 
 type ButtonStyledProps = ButtonProps;
 
@@ -17,22 +18,7 @@ const buttonStyle = css`
 const buttonSizes = css<ButtonStyledProps>`
   border-radius: ${({ theme: { sizes } }) => sizes.borderRadius};
 
-  ${({ size }) => {
-    switch (size) {
-      case "xs":
-        return {
-          padding: "4px 8px",
-        };
-      case "sm":
-        return { padding: "4px 12px" };
-      case "md":
-        return { padding: "8px 16px" };
-      case "lg":
-        return { padding: "12px 16px" };
-      case "xl":
-        return { padding: "16px 26px" };
-    }
-  }};
+  ${paddingBySize}
 `;
 
 const buttonColors = css<ButtonStyledProps>`

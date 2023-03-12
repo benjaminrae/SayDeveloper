@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 import { type FormGroupProps } from "./FormGroup";
 import fontSizes from "~/styles/utils/fontSizes";
+import paddingBySize from "~/styles/utils/paddingsBySize";
 
 type FormGroupStyledProps = Pick<FormGroupProps, "size" | "type" | "required">;
 
@@ -9,7 +10,11 @@ const formGroupColors = css<FormGroupStyledProps>`
     &__input {
       border-color: ${({ theme: { colors } }) => colors.greys.light};
 
-      :focus:active:not(:disabled) {
+      :focus:not(:disabled) {
+        border-color: ${({ theme: { colors } }) => colors.primary};
+      }
+
+      :active:not(:disabled) {
         border-color: ${({ theme: { colors } }) => colors.primary};
       }
 
@@ -88,7 +93,8 @@ const FormGroupStyled = styled.div<FormGroupStyledProps>`
     &__input {
       border: 2px solid currentColor;
       border-radius: ${({ theme: { sizes } }) => sizes.borderRadius};
-      padding: 0.5rem;
+
+      ${paddingBySize}
     }
 
     &__caption {
