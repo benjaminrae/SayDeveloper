@@ -1,5 +1,5 @@
 import renderWithProviders from "~/testUtils/renderWithProviders";
-import LoginPage from ".";
+import LoginPage from "../pages/login/index";
 import { screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 
