@@ -10,6 +10,7 @@ export default defineConfig({
     setupFiles: fileURLToPath(
       new URL("./src/testUtils/setup.ts", import.meta.url)
     ),
+    include: [...configDefaults.include, "**/*.test.tsx", "**/*.test.ts"],
     alias: { "~": fileURLToPath(new URL("./src", import.meta.url)) },
     coverage: {
       reporter: ["lcov", "html", "text"],
